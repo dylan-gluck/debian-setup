@@ -222,6 +222,10 @@ Replace Iosevka with the other font name you want. Letterspace variable handles 
 
 Don’t forget, after modifying ~/.Xresources file, You need to reload it using `xrdb ~/.Xresources` command. And the change of URxvt will be applied on next launch.
 
+```
+xrdb ~/.Xresources
+```
+
 ...
 
 ## Install oh my szh
