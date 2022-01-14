@@ -7,7 +7,7 @@ Single source of notes for new linux install
 Install these base packages as root on first login
 
 ```
-apt install sudo build-essential git lightdm awesome awesome-extra network-manager w3m vim neovim neofetch compton rxvt-unicode zsh zplug python python3 python3-pip xsel chromium
+apt install sudo build-essential git lightdm awesome awesome-extra network-manager w3m vim neovim neofetch compton rxvt-unicode zsh zplug python python3 python3-pip xsel chromium xsettingsd
 ```
 
 ## Setup LightDM
@@ -95,6 +95,14 @@ chsh -s /bin/zsh
 
 ...
 
+## Download Fonts
+
+Download fonts & Load them. Reference: https://addy-dclxvi.github.io/post/bitmap-fonts/
+
+```
+git clone https://github.com/addy-dclxvi/bitmap-font-collections.git ~/.fonts/misc; xset +fp ~/.fonts/misc/
+```
+
 ## Setup urxvt
 
 Clone urxvt-perls. Enter the urxvt-perls folder, then copy keyboard-select, clipboard, and url-select to `~/.urxvt/ext`
@@ -146,10 +154,10 @@ Now create a file called ~/.Xresources
 *.color15: #fdf6e3
 
 !! URxvt Appearance
-URxvt.font: xft:Iosevka:style=Regular:size=8
-URxvt.boldFont: xft:Iosevka:style=Bold:size=8
-URxvt.italicFont: xft:Iosevka:style=Italic:size=8
-URxvt.boldItalicfont: xft:Iosevka:style=Bold Italic:size=8
+URxvt.font: -*-rissole-*
+URxvt.boldFont: -*-rissole-*
+URxvt.italicFont: -*-rissole-*
+URxvt.boldItalicfont: -*-rissole-*
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
@@ -223,3 +231,20 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 
 powerlevel10k theme
+
+## Generate SSH Keys
+
+```
+ssh-keygen
+```
+
+---
+
+## Autorun Commands
+
+```
+# ~/awesome-login.sh
+xsettingsd &;
+xset +fp ~/.fonts/misc/;
+compton -b;
+```
