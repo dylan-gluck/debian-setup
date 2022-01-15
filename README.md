@@ -38,7 +38,7 @@ cd ~; git clone https://github.com/dylan-gluck/linux-config; cd linux-config; ch
 Install these base packages as root on first login
 
 ```
-apt install sudo build-essential git nodejs npm lightdm awesome awesome-extra network-manager compton zsh kitty links luakit neovim neofetch exa python3 python3-pip unclutter xsel xsettingsd libxext-dev libxres-dev
+apt install sudo build-essential git nodejs npm lightdm awesome awesome-extra network-manager compton zsh kitty links luakit neovim neofetch exa python3 python3-pip unclutter xsel xsettingsd libxext-dev libxres-dev lxappearance
 ```
 
 ## TODO:
