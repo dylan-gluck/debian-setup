@@ -16,7 +16,7 @@ Clone urxvt-perls. Enter the urxvt-perls folder, then copy keyboard-select, clip
 git clone https://github.com/muennich/urxvt-perls
 ```
 
-Now create a file called `~/.Xresources`. Copy from example.
+Now create a file called `~/.Xresources`. Copy from config folder.
 
 (visit https://terminal.sexy to get some colorscheme examples)
 You can get the xft name using fc-list command.
@@ -32,14 +32,6 @@ You can get the xft name using fc-list command.
 - `Alt ESC` to "activate" ?
 - `Alt S` to search
 - `Alt U` url select
-
-**Get XFT Font Format**
-
-```
-fc-list | grep "Iosevka"
-```
-
-Replace Iosevka with the other font name you want. Letterspace variable handles the space between characters. Linespace variable handles the linespacing between characters vertically. Geometry handles the URxvt size on launch. InternalBorder handles the terminal paddings, for aesthetic reason. But don’t set the paddings too much, we should care about usability too.
 
 **After Configurations**
 

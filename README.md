@@ -26,6 +26,8 @@ cd ~; git clone https://github.com/dylan-gluck/linux-config; cd linux-config; ch
   - Add widgets etc
 - Edit LightDM Config `/etc/lightdm/lightdm.conf`
 - Edit LightDM Background `/etc/lightdm/lightdm-gtk-greeter.conf`
+- Configure GTK Theme `~/.config/gtk-3.0/settings.ini`
+- Customize Kitty `~/. config/kitty/kitty. conf`
 
 ...
 
@@ -36,7 +38,15 @@ cd ~; git clone https://github.com/dylan-gluck/linux-config; cd linux-config; ch
 Install these base packages as root on first login
 
 ```
-apt install sudo build-essential git nodejs npm lightdm awesome awesome-extra network-manager w3m vim neovim neofetch compton terminator rxvt-unicode zsh zplug python python3 python3-pip xsel chromium xsettingsd exa libxext-dev libxres-dev
+apt install sudo build-essential git nodejs npm lightdm awesome awesome-extra network-manager compton zsh kitty links luakit neovim neofetch exa python3 python3-pip unclutter xsel xsettingsd libxext-dev libxres-dev
+```
+
+## TODO:
+
+Remember to Remove:
+
+```
+chromium w3m terminator rxvt-unicode zplug python
 ```
 
 ## Setup LightDM
@@ -57,7 +67,7 @@ chsh -s $(which zsh); sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh
 
 Login as non-root user.
 
-## Install VSCodium
+## VSCodium Reference
 
 ```
 # Deb Package
@@ -67,7 +77,7 @@ https://github.com/VSCodium/vscodium/releases/download/1.35.1/codium_1.35.1-1560
 https://github.com/VSCodium/vscodium/releases/download/1.35.1/VSCodium-linux-ia32-1.35.1.tar.gz
 ```
 
-## Install Sublime Text
+## Sublime Text Reference
 
 ```
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -;
