@@ -36,7 +36,7 @@ cd ~; git clone https://github.com/dylan-gluck/linux-config; cd linux-config; ch
 Install these base packages as root on first login
 
 ```
-apt install sudo build-essential git lightdm awesome awesome-extra network-manager w3m vim neovim neofetch compton rxvt-unicode zsh zplug python python3 python3-pip xsel chromium xsettingsd exa libxext-dev libxres-dev
+apt install sudo build-essential git node npm lightdm awesome awesome-extra network-manager w3m vim neovim neofetch compton rxvt-unicode zsh zplug python python3 python3-pip xsel chromium xsettingsd exa libxext-dev libxres-dev
 ```
 
 ## Setup LightDM

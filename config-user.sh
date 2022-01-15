@@ -30,3 +30,6 @@ sudo apt install packages/codium_1.35.1-1560422388_i386.deb
 
 # Install Ueberzug
 sudo pip3 install ueberzug ranger-fm
+
+# Install NPM Packages
+npm install -g yarn gtop
