@@ -116,6 +116,19 @@ Debian's LightDM GTK greeter is configured in /etc/lightdm/lightdm-gtk-greeter.c
 background=/path/to/file.svg
 ```
 
+## GTK Theme Settings
+
+`~/.config/gtk-3.0/settings.ini`
+
+```
+[Settings]
+gtk-application-prefer-dark-theme = false
+gtk-theme-name = Zukitwo
+gtk-fallback-icon-theme = gnome
+gtk-icon-theme-name = Faenza-Dark
+gtk-font-name = Terminus 12
+```
+
 ---
 
 ## Autorun Commands
