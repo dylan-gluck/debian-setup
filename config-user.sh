@@ -2,7 +2,7 @@
 
 # Copy Backgrounds
 sudo mkdir /usr/share/backgrounds
-cp backgrounds/* /usr/share/backgrounds
+sudo cp backgrounds/* /usr/share/backgrounds
 
 # Copy awesome-login.sh
 cp awesome-login.sh ~
@@ -16,8 +16,16 @@ cp /etc/xdg/awesome/rc.lua ~/.config/awesome
 git clone --recurse-submodules --remote-submodules --depth 1 -j 2 https://github.com/lcpz/awesome-copycats.git
 mv -bv awesome-copycats/* ~/.config/awesome; rm -rf awesome-copycats
 
+# Use new Awesome rc.lua
+mv ~/.config/awesome/rc.lua ~/.config/awesome/rc.original.lua
+mv ~/.config/awesome/rc.lua.template ~/.config/awesome/rc.lua
+
 # Install OhMyZSH
 echo "Y" | sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; source ~/.zshrc
+
+# Install Fonts
+mkdir ~/.fonts
+cp fonts/* ~/.fonts/
 
 # Install powerlevel10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
