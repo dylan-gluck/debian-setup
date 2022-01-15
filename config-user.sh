@@ -4,6 +4,10 @@
 sudo mkdir /usr/share/backgrounds
 cp backgrounds/* /usr/share/backgrounds
 
+# Copy awesome-login.sh
+cp awesome-login.sh ~
+chmod +x ~/awesome-login.sh
+
 # Awesome Config
 mkdir ~/.config/awesome
 cp /etc/xdg/awesome/rc.lua ~/.config/awesome

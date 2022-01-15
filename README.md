@@ -18,7 +18,12 @@ cd ~; git clone https://github.com/dylan-gluck/linux-config; cd linux-config; ch
 - Add powerlevel10k theme to `.zshrc`
 - Add aliases to `.zshrc`
 - Edit Aesome config `~/.config/awesome/rc.lua`
+  - Use default config from theme, customize from there
+  - Login script with launchers
+  - Add keybindings etc
 - Edit Theme config
+  - Customize background
+  - Add widgets etc
 - Edit LightDM Config `/etc/lightdm/lightdm.conf`
 - Edit LightDM Background `/etc/lightdm/lightdm-gtk-greeter.conf`
 
