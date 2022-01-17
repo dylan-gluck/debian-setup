@@ -33,6 +33,10 @@ xrdb ~/.Xresources
 rm -f ~/.config/kitty/kitty.conf 
 ln -s $PWD/config/kitty.conf ~/.config/kitty/kitty.conf
 
+# Ranger Config
+rm -f ~/.config/ranger/rc.conf
+ln -s $PWD/config/ranger/rc.conf ~/.config/ranger/rc.conf
+
 # Copy Fonts
 rm -rf ~/.fonts
 ln -s $PWD/fonts/* ~/.fonts/
