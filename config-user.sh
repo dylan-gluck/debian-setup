@@ -6,57 +6,57 @@
 # Settup base config for new machine instantly
 
 # Copy Backgrounds
-sudo mkdir /usr/share/backgrounds
-sudo cp backgrounds/* /usr/share/backgrounds
+sudo rm -rf /usr/share/backgrounds
+sudo ln -s $PWD/backgrounds/* /usr/share/backgrounds
 
 # Copy awesome-login.sh
 rm -f ~/awesome-login.sh
-ln -s awesome-login.sh ~/awesome-login.sh
+ln -s $PWD/awesome-login.sh ~/awesome-login.sh
 chmod +x ~/awesome-login.sh
 
 # Awesome Config
 rm -rf ~/.config/awesome
-ln -s config/awesome ~/.config/awesome
+ln -s $PWD/config/awesome ~/.config/awesome
 
 # LightDM Config
 sudo rm -f /etc/lightdm/lightdm.conf
 sudo rm -f /etc/lightdm/lightdm-gtk-greeter.conf
-sudo ln -s config/lightdm.conf /etc/lightdm/lightdm.conf
-sudo ln -s config/lightdm-gtk-greeter.conff /etc/lightdm/lightdm-gtk-greeter.conf
+sudo ln -s $PWD/config/lightdm.conf /etc/lightdm/lightdm.conf
+sudo ln -s $PWD/config/lightdm-gtk-greeter.conff /etc/lightdm/lightdm-gtk-greeter.conf
 
 # Xresources
 rm -f ~/.Xresources
-ls -s config/.Xresources ~/.Xresources
+ls -s $PWD/config/.Xresources ~/.Xresources
 xrdb ~/.Xresources
 
 # Kitty Config
 rm -f ~/.config/kitty/kitty.conf 
-ls -s config/kitty.conf ~/.config/kitty/kitty.conf
+ls -s $PWD/config/kitty.conf ~/.config/kitty/kitty.conf
 
 # Copy Fonts
 rm -rf ~/.fonts
-ls -s fonts/* ~/.fonts/
+ls -s $PWD/fonts/* ~/.fonts/
 xset +fp ~/.fonts
 xset +fp ~/.fonts/misc
 
 # Copy Theme Files
 rm -rf ~/.themes
-ls -s themes ~/.themes
+ls -s $PWD/themes ~/.themes
 
 # Copy Icons
 rm -rf ~/.local/share/icons 
-ls -s icons ~/.local/share/icons
+ls -s $PWD/icons ~/.local/share/icons
 
 # GTK Theme
 rm -f ~/.config/gtk-3.0/settings.ini
-ln -s config/settings.ini ~/.config/gtk-3.0/settings.ini
+ln -s $PWD/config/settings.ini ~/.config/gtk-3.0/settings.ini
 
 # Install OhMyZSH
 echo "Y" | sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # ZSH Config
 rm -f ~/.zshrc
-ls -s config/.zshrc ~/.zshrc
+ls -s $PWD/config/.zshrc ~/.zshrc
 source ~/.zshrc
 
 # Install powerlevel10k theme
