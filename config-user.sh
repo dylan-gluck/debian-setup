@@ -39,8 +39,7 @@ ln -s $PWD/config/ranger/rc.conf ~/.config/ranger/rc.conf
 
 # Copy Fonts
 rm -rf ~/.fonts
-ln -s $PWD/fonts/* ~/.fonts/
-xset +fp ~/.fonts
+ln -s $PWD/fonts ~/.fonts
 xset +fp ~/.fonts/misc
 
 # Copy Theme Files
