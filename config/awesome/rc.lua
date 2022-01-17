@@ -96,7 +96,7 @@ local terminal     = "urxvt"
 local vi_focus     = false
 local cycle_prev   = true
 local editor       = "nvim"
-local browser      = "luakit"
+local browser      = "w3m"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }

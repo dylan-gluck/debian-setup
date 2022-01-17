@@ -42,15 +42,7 @@ chmod +x ./config-user.sh && ./config-user.sh
 Install these base packages as root on first login
 
 ```
-apt install sudo build-essential dkms linux-headers-$(uname -r) git nodejs npm lightdm awesome awesome-extra network-manager compton zsh terminator kitty rxvt-unicode links luakit firefox-esr neovim neofetch exa python3 python3-pip unclutter xsel xsettingsd libxext-dev libxres-dev lxappearance mesa-utils software-properties-common
-```
-
-## TODO:
-
-Remember to Remove:
-
-```
-chromium w3m zplug python
+apt install sudo build-essential git nodejs npm lightdm awesome awesome-extra network-manager compton zsh rxvt-unicode w3m luakit firefox-esr neovim neofetch exa python3 python3-pip unclutter xsel xclip xsettingsd libxext-dev libxres-dev lxappearance
 ```
 
 ## Setup LightDM
