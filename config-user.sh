@@ -1,29 +1,59 @@
 #!/usr/bin/env bash
 
+# User Setup
+# This file removes any current config from local machine
+# Creates sym-links that point to files in this repo
+# Settup base config for new machine instantly
+
 # Copy Backgrounds
 sudo mkdir /usr/share/backgrounds
 sudo cp backgrounds/* /usr/share/backgrounds
 
 # Copy awesome-login.sh
-cp awesome-login.sh ~
+rm -f ~/awesome-login.sh
+ln -s awesome-login.sh ~/awesome-login.sh
 chmod +x ~/awesome-login.sh
 
 # Awesome Config
-mkdir ~/.config/awesome
-cp /etc/xdg/awesome/rc.lua ~/.config/awesome
-## TODO: Update to place the local configs in respective folders
+rm -rf ~/.config/awesome
+ln -s config/awesome ~/.config/awesome
 
-# Download Awesome Themes
-git clone --recurse-submodules --remote-submodules --depth 1 -j 2 https://github.com/lcpz/awesome-copycats.git
-mv -bv awesome-copycats/* ~/.config/awesome; rm -rf awesome-copycats
-## TODO: Use local version of themes with mods
+# LightDM Config
+sudo rm -f /etc/lightdm/lightdm.conf
+sudo rm -f /etc/lightdm/lightdm-gtk-greeter.conf
+sudo ln -s config/lightdm.conf /etc/lightdm/lightdm.conf
+sudo ln -s config/lightdm-gtk-greeter.conff /etc/lightdm/lightdm-gtk-greeter.conf
+
+# Xresources
+rm -f ~/.Xresources
+ls -s config/.Xresources ~/.Xresources
+xrdb ~/.Xresources
+
+# Copy Fonts
+rm -rf ~/.fonts
+ls -s fonts/* ~/.fonts/
+xset +fp ~/.fonts
+xset +fp ~/.fonts/misc
+
+# Copy Theme Files
+rm -rf ~/.themes
+ls -s themes ~/.themes
+
+# Copy Icons
+rm -rf ~/.local/share/icons 
+ls -s icons ~/.local/share/icons
+
+# GTK Theme
+rm -f ~/.config/gtk-3.0/settings.ini
+ln -s config/settings.ini ~/.config/gtk-3.0/settings.ini
 
 # Install OhMyZSH
-echo "Y" | sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; source ~/.zshrc
+echo "Y" | sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Install Fonts
-mkdir ~/.fonts
-cp fonts/* ~/.fonts/
+# ZSH Config
+rm -f ~/.zshrc
+ls -s config/.zshrc ~/.zshrc
+source ~/.zshrc
 
 # Install powerlevel10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -34,7 +64,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # Uncomment to Install Codium
 # sudo apt install packages/codium_1.35.1-1560422388_i386.deb
 
-# Install Ueberzug
+# Install Ueberzug & Ranger
 sudo pip3 install ueberzug ranger-fm
 
 # Install NPM Packages

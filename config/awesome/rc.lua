@@ -92,10 +92,10 @@ local themes = {
 local chosen_theme = themes[7]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "terminator"
-local vi_focus     = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
-local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
-local editor       = os.getenv("EDITOR") or "nvim"
+local terminal     = "urxvt"
+local vi_focus     = false
+local cycle_prev   = true
+local editor       = "nvim"
 local browser      = "luakit"
 
 awful.util.terminal = terminal
@@ -181,11 +181,10 @@ local myawesomemenu = {
 awful.util.mymainmenu = freedesktop.menu.build {
     before = {
         { "Awesome", myawesomemenu, beautiful.awesome_icon },
-	{ "Debian", debian.menu.Debian_menu.Debian },
+	    { "Debian", debian.menu.Debian_menu.Debian },
     },
     after = {
         { "Open terminal", terminal },
-        -- other triads can be put here
     }
 }
 
