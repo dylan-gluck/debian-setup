@@ -10,9 +10,13 @@ sh -c "$(curl -fsSL https://raw.github.com/dylan-gluck/linux-config/main/config-
 usermod -aG sudo [user]
 
 # Login as non-root user
+su [user]
 
 # Download git repo, run install script
-cd ~; git clone https://github.com/dylan-gluck/linux-config; cd linux-config; chmod +x ./config-user.sh; ./config-user.sh
+cd ~
+git clone https://github.com/dylan-gluck/linux-config
+cd linux-config
+chmod +x ./config-user.sh && ./config-user.sh
 ```
 
 - Add powerlevel10k theme to `.zshrc`
@@ -38,7 +42,7 @@ cd ~; git clone https://github.com/dylan-gluck/linux-config; cd linux-config; ch
 Install these base packages as root on first login
 
 ```
-apt install sudo build-essential git nodejs npm lightdm awesome awesome-extra network-manager compton zsh terminator kitty rxvt-unicode links luakit firefox-esr neovim neofetch exa python3 python3-pip unclutter xsel xsettingsd libxext-dev libxres-dev lxappearance
+apt install sudo build-essential dkms linux-headers-$(uname -r) git nodejs npm lightdm awesome awesome-extra network-manager compton zsh terminator kitty rxvt-unicode links luakit firefox-esr neovim neofetch exa python3 python3-pip unclutter xsel xsettingsd libxext-dev libxres-dev lxappearance mesa-utils software-properties-common
 ```
 
 ## TODO:
