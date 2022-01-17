@@ -19,7 +19,7 @@ theme.dir                                       = os.getenv("HOME") .. "/.config
 theme.wallpaper                                 = "/usr/share/backgrounds/anime1-inv.jpg"
 theme.font                                      = "JetBrains Mono Regular 10"
 theme.fg_normal                                 = "#c5c8c6"
-theme.fg_focus                                  = "#c5c8c6"
+theme.fg_focus                                  = "#f0c674"
 theme.fg_urgent                                 = "#c5c8c6"
 theme.bg_normal                                 = "#1d1f21"
 theme.bg_focus                                  = "#1d1f21"
@@ -28,7 +28,7 @@ theme.border_width                              = dpi(0)
 theme.border_normal                             = "#3F3F3F"
 theme.border_focus                              = "#7F7F7F"
 theme.border_marked                             = "#CC9393"
-theme.tasklist_bg_focus                         = "#2e3134"
+theme.tasklist_bg_focus                         = "#1d1f21"
 theme.titlebar_bg_focus                         = theme.bg_focus
 theme.titlebar_bg_normal                        = theme.bg_normal
 theme.titlebar_fg_focus                         = theme.fg_focus
@@ -259,9 +259,9 @@ local neticon = wibox.widget.imagebox(theme.widget_net)
 local net = lain.widget.net({
     settings = function()
         widget:set_markup(markup.font(theme.font,
-                          markup("#7AC82E", " " .. string.format("%06.1f", net_now.received))
+                          markup("#f0c674", " " .. string.format("%06.1f", net_now.received))
                           .. " " ..
-                          markup("#46A8C3", " " .. string.format("%06.1f", net_now.sent) .. " ")))
+                          markup("#81a2be", " " .. string.format("%06.1f", net_now.sent) .. " ")))
     end
 })
 
