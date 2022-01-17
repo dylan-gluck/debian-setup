@@ -29,6 +29,10 @@ rm -f ~/.Xresources
 ls -s config/.Xresources ~/.Xresources
 xrdb ~/.Xresources
 
+# Kitty Config
+rm -f ~/.config/kitty/kitty.conf 
+ls -s config/kitty.conf ~/.config/kitty/kitty.conf
+
 # Copy Fonts
 rm -rf ~/.fonts
 ls -s fonts/* ~/.fonts/
