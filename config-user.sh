@@ -52,6 +52,7 @@ rm -rf ~/.themes
 ln -s $PWD/themes ~/.themes
 
 # Copy Icons
+mkdir -p ~/.local/share/
 rm -rf ~/.local/share/icons 
 ln -s $PWD/icons ~/.local/share/icons
 
