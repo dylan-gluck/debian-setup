@@ -14,6 +14,9 @@ rm -f ~/aweslome-login.sh
 ln -s $PWD/awesome-login.sh ~/awesome-login.sh
 chmod +x ~/awesome-login.sh
 
+# Make config folder
+mkdir ~/.config
+
 # Awesome Config
 rm -rf ~/.config/awesome
 ln -s $PWD/config/awesome ~/.config/awesome
@@ -30,10 +33,12 @@ ln -s $PWD/config/.Xresources ~/.Xresources
 xrdb ~/.Xresources
 
 # Kitty Config
+mkdir ~/.config/kitty
 rm -f ~/.config/kitty/kitty.conf 
 ln -s $PWD/config/kitty.conf ~/.config/kitty/kitty.conf
 
 # Ranger Config
+mkdir ~/.config/ranger
 rm -f ~/.config/ranger/rc.conf
 ln -s $PWD/config/ranger/rc.conf ~/.config/ranger/rc.conf
 
@@ -51,6 +56,7 @@ rm -rf ~/.local/share/icons
 ln -s $PWD/icons ~/.local/share/icons
 
 # GTK Theme
+mkdir ~/.config/gtk-3.0
 rm -f ~/.config/gtk-3.0/settings.ini
 ln -s $PWD/config/settings.ini ~/.config/gtk-3.0/settings.ini
 
